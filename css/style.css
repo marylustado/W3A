@@ -1,0 +1,79 @@
+
+/* General page styling */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+/* ID SELECTOR */
+#site-header {
+    background-color: #263b32;
+    color: white;
+    text-align: center;
+    padding: 35px 20px;
+}
+
+/* CLASS SELECTOR */
+.animal-grid {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    gap: 25px;
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+/* CHILD SELECTOR ( > ) */
+main > .animal-grid {
+    width: calc(100% - 40px);
+}
+
+/* CLASS SELECTOR */
+.animal-card {
+    background-color: white;
+    border-radius: 12px;
+    padding: 20px;
+    flex: 1;
+    min-width: 0;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* DESCENDANT SELECTOR (space) */
+.animal-card img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+/* DESCENDANT SELECTOR (space) */
+.animal-card h2 {
+    color: #315b45;
+    margin-bottom: 8px;
+}
+
+/* ADJACENT SIBLING SELECTOR ( + ) */
+.animal-card h2 + p {
+    line-height: 1.7;
+    color: #555;
+    margin-top: 0;
+}
+
+/* Footer styling */
+footer {
+    background-color: #263b32;
+    color: white;
+    text-align: center;
+    padding: 15px;
+}
+
+/* BONUS: Responsive layout for smaller screens */
+@media (max-width: 768px) {
+    .animal-grid {
+        flex-direction: column;
+    }
+}
